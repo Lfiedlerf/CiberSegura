@@ -1,0 +1,29 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+.hover-scale:hover {
+  transform: scale(1.02);
+  transition: transform .3s;
+}
+.invalid-feedback {
+  display: block;
+}
