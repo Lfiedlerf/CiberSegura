@@ -19,6 +19,7 @@ Sitio web interactivo que educa a los usuarios sobre las amenazas digitales actu
 * **jQuery 3.6:** Manipulación del DOM y eventos.
 
 ## 📂 Estructura del Proyecto
+```text
 /
 ├── assets/
 │   └── img/          # Recursos gráficos optimizados
