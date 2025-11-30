@@ -1,29 +1,87 @@
-/* Reset básico */
+:root {
+  /* Variables para consistencia y fácil mantenimiento */
+  --primary-color: #0d6efd;
+  --bg-light: #f8f9fa;
+  --text-light: #212529;
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --card-bg-dark: #1e1e1e;
+}
+
+/* Reset básico y Sticky Footer */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía consistente  */
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+  
+  /* Asegura que el footer se quede abajo incluso con poco contenido */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Hero Section Responsiva */
 .hero {
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  /* Cambio clave: min-height en lugar de height fijo para evitar desbordes en móviles [cite: 10] */
+  min-height: 60vh; 
   position: relative;
+  display: flex;
+  align-items: center;
 }
+
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6); /* Un poco más oscuro para mejorar contraste [cite: 32] */
 }
+
 .hero .container {
   position: relative;
   z-index: 1;
 }
-.hover-scale:hover {
-  transform: scale(1.02);
-  transition: transform .3s;
+
+/* Componentes y Utilidades */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.invalid-feedback {
-  display: block;
+
+.hover-scale:hover, .hover-scale:focus-within {
+  transform: translateY(-5px); /* Movimiento más sutil y profesional */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+/* Eliminar CSS conflictivo con Bootstrap */
+/* .invalid-feedback { display: block; }  <- ELIMINADO para permitir validación nativa  */
+
+/* --- Estilos para Modo Oscuro (Bono +2 pts)  --- */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .card {
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+  border-color: #333;
+}
+
+body.dark-mode .list-group-item {
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+  border-color: #333;
+}
+
+body.dark-mode .modal-content {
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
 }

@@ -8,164 +8,128 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">CiberSegura</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active" href="amenazas.html">Amenazas</a></li>
-          <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
-        </ul>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">CiberSegura</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="amenazas.html">Amenazas</a></li>
+            <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="container my-5">
     <h2 class="mb-4 text-center">Amenazas Cibernéticas Comunes</h2>
     
-    <div class="row g-4 mb-5">
+    <section class="row g-4 mb-5">
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm hover-scale">
-          <img src="assets/img/phishing.webp" class="card-img-top" alt="Phishing">
+        <article class="card h-100 shadow-sm hover-scale">
+          <img src="assets/img/phishing.webp" class="card-img-top" alt="Ejemplo de Phishing">
           <div class="card-body">
             <h5 class="card-title">Phishing</h5>
             <p class="card-text">Suplantación de identidad para robar información sensible.</p>
           </div>
-        </div>
+        </article>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm hover-scale">
-          <img src="assets/img/ransomware.jpg" class="card-img-top" alt="Ransomware">
+        <article class="card h-100 shadow-sm hover-scale">
+          <img src="assets/img/ransomware.jpg" class="card-img-top" alt="Ejemplo de Ransomware">
           <div class="card-body">
             <h5 class="card-title">Ransomware</h5>
             <p class="card-text">Secuestro de datos a cambio de un rescate.</p>
           </div>
-        </div>
+        </article>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm hover-scale">
-          <img src="assets/img/malware.png" class="card-img-top" alt="Malware">
+        <article class="card h-100 shadow-sm hover-scale">
+          <img src="assets/img/malware.png" class="card-img-top" alt="Icono de Malware">
           <div class="card-body">
             <h5 class="card-title">Malware</h5>
             <p class="card-text">Software dañino que compromete sistemas.</p>
           </div>
-        </div>
+        </article>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm hover-scale">
-          <img src="assets/img/ddos.jpg" class="card-img-top" alt="DDoS">
+        <article class="card h-100 shadow-sm hover-scale">
+          <img src="assets/img/ddos.jpg" class="card-img-top" alt="Ataque DDoS">
           <div class="card-body">
             <h5 class="card-title">DDoS</h5>
             <p class="card-text">Saturación de servicios impidiendo el acceso.</p>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <h3 class="mb-3">Casos Reales</h3>
-    <div class="accordion" id="accordionCases">
-      
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="case1">
-          <button class="accordion-button" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#collapse1"
-                  aria-expanded="true" aria-controls="collapse1">
-            Caso Equifax (2017)
-          </button>
-        </h2>
-        <div id="collapse1" class="accordion-collapse collapse show"
-             aria-labelledby="case1" data-bs-parent="#accordionCases">
-          <div class="accordion-body">
-            <article class="my-4 p-4 border rounded shadow-sm">
-              <h2>Caso Equifax (2017)</h2>
-              <p class="text-muted small"><em>Atlanta, GA – mayo a julio 2017</em></p>
-
-              <p><strong>El Caso Equifax: Una de las mayores brechas de seguridad de la historia expuso datos personales de 147,9 millones de estadounidenses, 15,2 millones de británicos y 19 000 canadienses.</strong></p>
-
-              <ul class="list-group list-group-flush mb-3">
-                <li class="list-group-item">Nombres, apellidos, números de Seguro Social, fechas de nacimiento y direcciones.</li>
-                <li class="list-group-item">10–11 millones de números de licencia de conducir.</li>
-                <li class="list-group-item">~209 000 números de tarjetas de crédito.</li>
-                <li class="list-group-item">~182 000 registros de disputas.</li>
-              </ul>
-
-              <h4>Fallo en la actualización clave</h4>
-              <p>Equifax no parcheó una vulnerabilidad crítica en Apache Struts publicada el 7 mar 2017. Los atacantes ingresaron el 12 may, robaron credenciales “admin” y se movieron libremente durante 76 días.</p>
-
-              <h4>Descubrimiento y divulgación</h4>
-              <p>La intrusión se detectó el 29 jul 2017 al renovar un certificado SSL. La divulgación pública ocurrió el 7 sep 2017, provocando una caída del 13 % en el primer día y hasta un 35 % en la semana.</p>
-
-              <h4>Consecuencias legales y financieras</h4>
-              <p>Equifax acordó pagar más de $1 400 millones en compensaciones y multas, además de la renuncia de su CIO y CSO.</p>
-
-              <blockquote class="blockquote mt-4">
-                <p class="mb-0"><em>Lección: aplicar parches de seguridad de inmediato, segmentar redes y mantener monitoreo constante.</em></p>
-              </blockquote>
-            </article>
+    <section>
+      <h3 class="mb-3">Casos Reales</h3>
+      <div class="accordion" id="accordionCases">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="case1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+              Caso Equifax (2017)
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="case1" data-bs-parent="#accordionCases">
+            <div class="accordion-body">
+              <article class="my-4 p-4 border rounded shadow-sm">
+                <h2>Caso Equifax (2017)</h2>
+                <p class="text-muted small"><em>Atlanta, GA – mayo a julio 2017</em></p>
+                <p><strong>El Caso Equifax:</strong> Una de las mayores brechas de seguridad expuso datos de 147,9 millones de personas.</p>
+                <ul>
+                    <li>Datos expuestos: Nombres, SSN, fechas de nacimiento.</li>
+                    <li>Causa: Vulnerabilidad no parcheada en Apache Struts.</li>
+                </ul>
+                <blockquote class="blockquote mt-4">
+                  <p class="mb-0"><em>Lección: aplicar parches de seguridad de inmediato.</em></p>
+                </blockquote>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="case2">
-          <button class="accordion-button" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#collapse2"
-                  aria-expanded="false" aria-controls="collapse2">
-            WannaCry (2017)
-          </button>
-        </h2>
-        <div id="collapse2" class="accordion-collapse collapse"
-             aria-labelledby="case2" data-bs-parent="#accordionCases">
-          <div class="accordion-body">
-            <article class="my-4 p-4 border rounded shadow-sm">
-              <h2>WannaCry (2017)</h2>
-              <p class="text-muted small"><em>12 de mayo de 2017</em></p>
-
-              <p><strong>Ciberataque WannaCry: Un “Criptogusano” que sacudió al mundo y reveló vulnerabilidades críticas.</strong></p>
-
-              <p>En más de 150 países, WannaCry cifró datos y exigió 300–600 USD en Bitcoin sin que el usuario hiciera clic. Explotó SMBv1 de Windows vía EternalBlue, filtrada por Shadow Brokers.</p>
-
-              <h4>Modus Operandi y alcance</h4>
-              <ul class="list-group list-group-flush mb-3">
-                <li class="list-group-item">Propagación automática por puerto 445 (SMB).</li>
-                <li class="list-group-item">Uso de DoublePulsar para instalarse.</li>
-                <li class="list-group-item">Nota de rescate en 28 idiomas; pago vía Tor.</li>
-                <li class="list-group-item">Incluía “kill switch” para detenerse.</li>
-              </ul>
-
-              <h4>Impacto económico y víctimas</h4>
-              <p>Más de 300 000 computadoras afectadas; pérdidas globales de hasta 4 000 M USD. México fue 5.º más afectado. NHS del Reino Unido, Nissan, Renault, FedEx y Telefónica, entre los blancos.</p>
-
-              <h4>Respuesta y atribución</h4>
-              <p>El investigador Marcus Hutchins activó el kill switch. Microsoft liberó parches fuera de banda. Grupo Lazarus (Corea del Norte) señalado como autor por EE. UU. y Reino Unido.</p>
-
-              <h4>Lecciones Aprendidas</h4>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Aplicar parches inmediatamente.</li>
-                <li class="list-group-item">Copias de seguridad regulares.</li>
-                <li class="list-group-item">Formación constante del personal.</li>
-                <li class="list-group-item">Deshabilitar SMBv1 si no se parchea.</li>
-                <li class="list-group-item">Monitoreo proactivo y segmentación de red.</li>
-                <li class="list-group-item">Comunicación y colaboración entre niveles.</li>
-              </ul>
-
-              <blockquote class="blockquote mt-4">
-                <p class="mb-0"><em>Lección: la ciberseguridad es un ciclo continuo de actualizaciones, monitoreo y educación.</em></p>
-              </blockquote>
-            </article>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="case2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              WannaCry (2017)
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="case2" data-bs-parent="#accordionCases">
+            <div class="accordion-body">
+              <article class="my-4 p-4 border rounded shadow-sm">
+                <h2>WannaCry (2017)</h2>
+                <p class="text-muted small"><em>12 de mayo de 2017</em></p>
+                <p>Ciberataque global que cifró datos y exigió rescate en Bitcoin usando el exploit EternalBlue.</p>
+                <blockquote class="blockquote mt-4">
+                  <p class="mb-0"><em>Lección: mantener copias de seguridad y sistemas actualizados.</em></p>
+                </blockquote>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-dark text-white text-center py-3">
-    <small>© 2025 CiberSegura.</small>
+    <div class="mb-2">© 2025 CiberSegura. Todos los derechos reservados.</div>
+    <div>
+        <a href="#" class="mx-2" aria-label="Facebook"><img src="assets/img/facebook.webp" alt="Facebook" width="24"></a>
+        <a href="#" class="mx-2" aria-label="Instagram"><img src="assets/img/instagram.png" alt="Instagram" width="24"></a>
+        <a href="#" class="mx-2" aria-label="LinkedIn"><img src="assets/img/linkedin.png" alt="LinkedIn" width="24"></a>
+        <a href="#" class="mx-2" aria-label="X (Twitter)"><img src="assets/img/X.png" alt="X" width="24"></a>
+        <a href="#" class="mx-2" aria-label="WhatsApp"><img src="assets/img/whatsapp.jpg" alt="WhatsApp" width="24"></a>
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

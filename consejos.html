@@ -8,73 +8,84 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">CiberSegura</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="amenazas.html">Amenazas</a></li>
-          <li class="nav-item"><a class="nav-link active" href="consejos.html">Consejos</a></li>
-        </ul>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">CiberSegura</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="amenazas.html">Amenazas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="consejos.html">Consejos</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="container my-5">
-    <h2>Consejos de Seguridad</h2>
-    <ul class="list-group mb-4">
-      <li class="list-group-item">Usar contraseñas complejas y administradores de contraseñas.</li>
-      <li class="list-group-item">Habilitar autenticación de dos factores.</li>
-      <li class="list-group-item">Mantener software y sistemas actualizados.</li>
-      <li class="list-group-item">Verificar URLs antes de hacer clic.</li>
-    </ul>
+    <section>
+      <h2>Consejos de Seguridad</h2>
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Usar contraseñas complejas y administradores de contraseñas.</li>
+        <li class="list-group-item">Habilitar autenticación de dos factores (2FA).</li>
+        <li class="list-group-item">Mantener software y sistemas actualizados.</li>
+        <li class="list-group-item">Verificar URLs antes de hacer clic.</li>
+      </ul>
+    </section>
 
-    <h3>Contacto</h3>
-    <form id="formContacto" class="needs-validation" novalidate>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" required>
-        <div class="invalid-feedback">Ingresa un correo válido.</div>
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-        <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+    <section>
+      <h3>Contacto</h3>
+      <form id="formContacto" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Ingresa un correo válido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+          <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
 
-    <button class="btn btn-warning mt-4" data-bs-toggle="modal" data-bs-target="#testModal">
-      Test de Seguridad
-    </button>
+    <section class="mt-5">
+      <h3>Evalúa tus conocimientos</h3>
+      <button class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#testModal">
+        Iniciar Test de Seguridad
+      </button>
+    </section>
 
-    <div class="modal fade" id="testModal" tabindex="-1">
+    <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content p-4">
+          <h4 id="modalTitle" class="mb-3">Cuestionario de Seguridad</h4>
 
           <h5>¿Actualizas tu equipo regularmente?</h5>
-          <div class="d-flex gap-2 mt-2">
+          <div class="d-flex gap-2 mt-2 mb-3">
             <button class="btn btn-outline-success respuesta" data-resp="sí">Sí</button>
             <button class="btn btn-outline-danger respuesta" data-resp="no">No</button>
           </div>
 
-          <h5 class="mt-4">¿Usas contraseñas únicas?</h5>
-          <div class="d-flex gap-2 mt-2">
+          <h5>¿Usas contraseñas únicas?</h5>
+          <div class="d-flex gap-2 mt-2 mb-3">
             <button class="btn btn-outline-success respuesta" data-resp="sí">Sí</button>
             <button class="btn btn-outline-danger respuesta" data-resp="no">No</button>
           </div>
 
-          <h5 class="mt-4">¿Verificas enlaces antes de hacer clic?</h5>
-          <div class="d-flex gap-2 mt-2">
+          <h5>¿Verificas enlaces antes de hacer clic?</h5>
+          <div class="d-flex gap-2 mt-2 mb-3">
             <button class="btn btn-outline-success respuesta" data-resp="sí">Sí</button>
             <button class="btn btn-outline-danger respuesta" data-resp="no">No</button>
           </div>
 
-          <div id="feedback" class="mt-3 fw-bold"></div>
+          <div id="feedback" class="mt-3 fw-bold" role="alert"></div>
           <button class="btn btn-secondary mt-4" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
@@ -85,11 +96,11 @@
   <footer class="bg-dark text-white text-center py-3">
     <div class="mb-2">© 2025 CiberSegura. Todos los derechos reservados.</div>
     <div>
-      <a href="#" class="mx-2"><img src="assets/img/facebook.webp" alt="Facebook" width="24"></a>
-      <a href="#" class="mx-2"><img src="assets/img/instagram.png" alt="Instagram" width="24"></a>
-      <a href="#" class="mx-2"><img src="assets/img/linkedin.png" alt="LinkedIn" width="24"></a>
-      <a href="#" class="mx-2"><img src="assets/img/X.png" alt="X" width="24"></a>
-      <a href="#" class="mx-2"><img src="assets/img/whatsapp.jpg" alt="WhatsApp" width="24"></a>
+      <a href="#" class="mx-2" aria-label="Facebook"><img src="assets/img/facebook.webp" alt="Facebook" width="24"></a>
+      <a href="#" class="mx-2" aria-label="Instagram"><img src="assets/img/instagram.png" alt="Instagram" width="24"></a>
+      <a href="#" class="mx-2" aria-label="LinkedIn"><img src="assets/img/linkedin.png" alt="LinkedIn" width="24"></a>
+      <a href="#" class="mx-2" aria-label="X (Twitter)"><img src="assets/img/X.png" alt="X" width="24"></a>
+      <a href="#" class="mx-2" aria-label="WhatsApp"><img src="assets/img/whatsapp.jpg" alt="WhatsApp" width="24"></a>
     </div>
   </footer>
 
